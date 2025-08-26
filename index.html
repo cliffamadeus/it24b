@@ -7,5 +7,20 @@
 </head>
 <body>
     <h1>Hello World</h1>
+
+    <input type="text" id="textbox" placeholder="Type something here..." 
+           oninput="updateDisplay()">
+    <h1 id="displayText">Your text will appear here</h1>
+
+<script>
+
+    function updateDisplay(){
+        var textbox = document.getElementById('textbox');
+        var displayText = document.getElementById('displayText');
+
+        displayText.textContent = textbox.value;
+    }
+
+</script>
 </body>
 </html>
